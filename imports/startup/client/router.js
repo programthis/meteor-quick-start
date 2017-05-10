@@ -14,7 +14,6 @@ import '../../ui/home/home.js';
 // 	]
 // });
 
-
 FlowRouter.route('/', {
 	name: 'home',
 	action() {
