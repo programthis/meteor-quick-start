@@ -6,6 +6,7 @@ import '../../ui/home/home.js';
 import '../../ui/login/login.js';
 import '../../ui/register/register.js';
 import '../../ui/resetPassword/resetPassword.js';
+import '../../ui/newPassword/newPassword.js';
 
 // document.title = "Title of Website";
 
@@ -50,6 +51,16 @@ FlowRouter.route('/', {
 // 	],
 // 	action() {
 // 		BlazeLayout.render('layout', { main: 'resetPassword' });
+// 	}
+// });
+
+// FlowRouter.route('/', {
+// 	name: 'newPassword',
+// 	triggersEnter: [
+// 		notUser
+// 	],
+// 	action() {
+// 		BlazeLayout.render('layout', { main: 'newPassword' });
 // 	}
 // });
 
