@@ -25,6 +25,10 @@ Other:
 - created basic router.js file
 - created schema and subscription for users
 
+## New repo instructions
+git remote add origin URL_TO_GITHUB_REPO
+git push -u origin master
+
 ## Installation instructions
 meteor npm install
 
