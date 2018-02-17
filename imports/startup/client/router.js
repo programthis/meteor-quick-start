@@ -3,16 +3,16 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 
 import '../../ui/layout/layout.js';
 import '../../ui/home/home.js';
+import '../../ui/login/login.js';
 
 // document.title = "Title of Website";
 
-// Sample setup for private routes
-// let privateRoutes = FlowRouter.group({
-// 	name: "private",
-// 	triggersEnter: [
-// 		isUser
-// 	]
-// });
+let privateRoutes = FlowRouter.group({
+	name: "private",
+	triggersEnter: [
+		isUser
+	]
+});
 
 FlowRouter.route('/', {
 	name: 'home',
@@ -21,9 +21,24 @@ FlowRouter.route('/', {
 	}
 });
 
-// Sample setup to determine if user is logged in
-// function isUser() {
-// 	if (!Meteor.userId()) {
-// 		FlowRouter.go("home");
-// 	}
-// }
+FlowRouter.route('/', {
+	name: 'login',
+	triggersEnter: [
+		notUser
+	],
+	action() {
+		BlazeLayout.render('layout', { main: 'login' });
+	}
+});
+
+function isUser() {
+	if (!Meteor.userId()) {
+		FlowRouter.go("home");
+	}
+}
+
+function notUser() {
+	if (Meteor.userId()) {
+		FlowRouter.go("home");
+	}
+}
