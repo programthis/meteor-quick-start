@@ -28,3 +28,4 @@ dynamic-import@0.3.0
 mdg:validated-method
 alanning:roles
 email
+force-ssl
