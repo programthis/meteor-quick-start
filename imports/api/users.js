@@ -100,4 +100,15 @@ if (Meteor.isServer) {
 	//         Accounts.sendVerificationEmail(userId);
 	//     }
 	// });
+
+	// export const sendUserResetPasswordEmail = new ValidatedMethod({
+	//     name: "sendUserResetPasswordEmail",
+	//     validate: new SimpleSchema({
+	//         email: { type: String }
+	//     }).validator(),
+	//     run({ email }) {
+	//         let user = Meteor.users.findOne({"emails.address": email});
+	//         Accounts.sendResetPasswordEmail(user._id);
+	//     }
+	// });
 }

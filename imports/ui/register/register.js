@@ -19,13 +19,7 @@ Template.register.events({
 			}
 			else {
 				let userId = result;
-				Meteor.call("sendVerificationEmail", {userId}, function(error, result) {
-					if (error) {
-					}
-					else {
-						$(".errorMessage").html("A verification email has been sent to your address.");
-					}
-				});
+				Meteor.call("sendVerificationEmail", {userId});
 			}
 		});
 	},

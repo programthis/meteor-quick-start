@@ -5,15 +5,16 @@ import '../../ui/layout/layout.js';
 import '../../ui/home/home.js';
 import '../../ui/login/login.js';
 import '../../ui/register/register.js';
+import '../../ui/resetPassword/resetPassword.js';
 
 // document.title = "Title of Website";
 
-let privateRoutes = FlowRouter.group({
-	name: "private",
-	triggersEnter: [
-		isUser
-	]
-});
+// let privateRoutes = FlowRouter.group({
+// 	name: "private",
+// 	triggersEnter: [
+// 		isUser
+// 	]
+// });
 
 FlowRouter.route('/', {
 	name: 'home',
@@ -22,34 +23,44 @@ FlowRouter.route('/', {
 	}
 });
 
-FlowRouter.route('/', {
-	name: 'login',
-	triggersEnter: [
-		notUser
-	],
-	action() {
-		BlazeLayout.render('layout', { main: 'login' });
-	}
-});
+// FlowRouter.route('/', {
+// 	name: 'login',
+// 	triggersEnter: [
+// 		notUser
+// 	],
+// 	action() {
+// 		BlazeLayout.render('layout', { main: 'login' });
+// 	}
+// });
 
-FlowRouter.route('/', {
-	name: 'register',
-	triggersEnter: [
-		notUser
-	],
-	action() {
-		BlazeLayout.render('layout', { main: 'register' });
-	}
-});
+// FlowRouter.route('/', {
+// 	name: 'register',
+// 	triggersEnter: [
+// 		notUser
+// 	],
+// 	action() {
+// 		BlazeLayout.render('layout', { main: 'register' });
+// 	}
+// });
 
-function isUser() {
-	if (!Meteor.userId()) {
-		FlowRouter.go("home");
-	}
-}
+// FlowRouter.route('/', {
+// 	name: 'resetPassword',
+// 	triggersEnter: [
+// 		notUser
+// 	],
+// 	action() {
+// 		BlazeLayout.render('layout', { main: 'resetPassword' });
+// 	}
+// });
 
-function notUser() {
-	if (Meteor.userId()) {
-		FlowRouter.go("home");
-	}
-}
+// function isUser() {
+// 	if (!Meteor.userId()) {
+// 		FlowRouter.go("home");
+// 	}
+// }
+
+// function notUser() {
+// 	if (Meteor.userId()) {
+// 		FlowRouter.go("home");
+// 	}
+// }
