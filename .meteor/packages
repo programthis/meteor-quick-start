@@ -25,3 +25,4 @@ aldeed:simple-schema
 aldeed:collection2
 arillo:flow-router-helpers
 dynamic-import@0.3.0
+mdg:validated-method
