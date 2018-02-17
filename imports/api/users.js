@@ -36,9 +36,50 @@ Meteor.users.attachSchema(new SimpleSchema({
 	}
 }));
 
-
 if (Meteor.isServer) {
 	Meteor.publish("users", function() {
 		return Meteor.users.find({});
 	});
+
+	// sample code for setting up email verification functionality
+	// Meteor.startup(function() {
+	// 	let email = Meteor.settings.email,
+	// 		password = Meteor.settings.emailPassword;
+	// 	process.env.MAIL_URL = `smtps://${email}:${password}@smtp.gmail.com:465`;
+	// });
+
+	// Accounts.emailTemplates.from = "example email <example_email@gmail.com>";
+
+	// Accounts.emailTemplates.resetPassword.subject = () => {
+	// 	return "Link to reset your password";
+	// };
+
+	// Accounts.emailTemplates.verifyEmail.subject = () => {
+	// 	return "Verify your email";
+	// }
+
+	// Accounts.validateLoginAttempt(function(options) {
+	// 	if (!options.allowed) {
+	// 		return false;
+	// 	}
+
+	// 	if (options.user.emails[0].verified === true) {
+	// 		return true;
+	// 	}
+	// 	else {
+	// 		let userId = options.user._id;
+	// 		Meteor.call("sendVerificationEmail", {userId});
+	// 		throw new Meteor.Error(403, "You must verify your email before you can login. An email has been sent to your address.");
+	// 	}
+	// });
+
+	// export const sendVerificationEmail = new ValidatedMethod({
+	//     name: "sendVerificationEmail",
+	//     validate: new SimpleSchema({
+	//         userId: { type: String }
+	//     }).validator(),
+	//     run({ userId }) {
+	//         Accounts.sendVerificationEmail(userId);
+	//     }
+	// });
 }
