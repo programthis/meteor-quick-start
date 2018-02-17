@@ -2,9 +2,9 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 var Schemas = {};
 Schemas.UserProfile = new SimpleSchema({
-    name: {
+    username: {
         type: String,
-        label: "User's name"
+        label: "User name"
     }
 });
 
@@ -41,7 +41,7 @@ if (Meteor.isServer) {
 		return Meteor.users.find({});
 	});
 
-	// sample code for setting up email verification functionality
+	// sample code for setting up users (including email verification functionality)
 	// Meteor.startup(function() {
 	// 	let email = Meteor.settings.email,
 	// 		password = Meteor.settings.emailPassword;
@@ -71,6 +71,24 @@ if (Meteor.isServer) {
 	// 		Meteor.call("sendVerificationEmail", {userId});
 	// 		throw new Meteor.Error(403, "You must verify your email before you can login. An email has been sent to your address.");
 	// 	}
+	// });
+
+	// export const registerUser = new ValidatedMethod({
+	//     name: "registerUser",
+	//     validate: new SimpleSchema({
+	//         username: { type: String },
+	//         email: { type: String },
+	//         password: { type: String }
+	//     }).validator(),
+	//     run({ username, email, password }) {
+	//         return Accounts.createUser({
+	//         	email: email,
+	//         	password: password,
+	//         	profile: {
+	//         		username: username
+	//         	}
+	//         });
+	//     }
 	// });
 
 	// export const sendVerificationEmail = new ValidatedMethod({
