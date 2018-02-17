@@ -4,6 +4,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 import '../../ui/layout/layout.js';
 import '../../ui/home/home.js';
 import '../../ui/login/login.js';
+import '../../ui/register/register.js';
 
 // document.title = "Title of Website";
 
@@ -28,6 +29,16 @@ FlowRouter.route('/', {
 	],
 	action() {
 		BlazeLayout.render('layout', { main: 'login' });
+	}
+});
+
+FlowRouter.route('/', {
+	name: 'register',
+	triggersEnter: [
+		notUser
+	],
+	action() {
+		BlazeLayout.render('layout', { main: 'register' });
 	}
 });
 
