@@ -14,11 +14,20 @@ Packages added:
 - aldeed:simple-schema
 - aldeed:collection2
 - arillo:flow-router-helpers
+- mdg:validated-method
+- alanning:roles
+- email
+- force-ssl
+- momentjs:moment
 
 Other:
 - added imports folder hierarchy
 - created basic router.js file
 - created schema and subscription for users
+
+## New repo instructions
+git remote add origin URL_TO_GITHUB_REPO    
+git push -u origin master
 
 ## Installation instructions
 meteor npm install

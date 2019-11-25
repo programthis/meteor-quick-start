@@ -1,0 +1,14 @@
+<template name="login">
+	<div class="login">
+		<form>
+			<input id="li-email" type="email" placeholder="Email">
+			<input id="li-password" type="password" placeholder="Password">
+			<input class="loginSubmit" type="submit" value="Login" disabled>
+			<div class="loginTools">
+				<a href="{{pathFor 'register'}}">Register</a>
+				<span> | </span>
+				<a href="{{pathFor 'resetPassword'}}">Reset Password</a>
+			</div>
+		</form>
+	</div>
+</template>
