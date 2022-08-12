@@ -16,9 +16,6 @@ Packages added:
 - arillo:flow-router-helpers
 - mdg:validated-method
 - alanning:roles
-- email
-- force-ssl
-- momentjs:moment
 
 Other:
 - added imports folder hierarchy
