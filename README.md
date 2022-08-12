@@ -1,3 +1,5 @@
+## Introduction:
+
 I spin up a lot of meteor prototypes and just found it annoying to have to do the same initial steps to get the app set up. The skeleton structure I've created here mostly aims to have the essential packages pre-installed and the basic app structure intact. *Note: this skeleton app uses blaze templating.*
 
 Below, you can see the full list of my changes:
@@ -23,11 +25,11 @@ Other:
 - created schema and subscription for users
 
 ## New repo instructions
-git remote add origin URL_TO_GITHUB_REPO    
-git push -u origin master
+`git remote add origin URL_TO_GITHUB_REPO`    
+`git push -u origin master`
 
 ## Installation instructions
-meteor npm install
+`meteor npm install`
 
 ## Launch instructions
-meteor
+`meteor`
