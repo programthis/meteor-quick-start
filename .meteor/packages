@@ -24,6 +24,4 @@ kadira:blaze-layout
 aldeed:simple-schema
 aldeed:collection2
 arillo:flow-router-helpers
-dynamic-import@0.7.2
-underscore@1.0.10
 jquery
